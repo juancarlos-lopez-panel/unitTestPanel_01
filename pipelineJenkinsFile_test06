@@ -1,0 +1,20 @@
+pipeline {
+    agent none
+
+    stages {
+        stage ("Install application packages") {
+            agent { dockerfile true }
+            }
+            steps {
+                // cmd para ejecutar test
+                /*
+                sh "npm --version"
+                sh "cd ./registration-form-webapp ; npm install"
+                */
+				bat 'cd D:'
+				bat 'cd D:\GIT\TESTUNIT\JC_NETTestUnit\NETTestUnit_06'
+				bat 'docker build -t juancarloslopezpanel/nettestunit_06:firsttry .'
+            }
+        }
+    }
+}
