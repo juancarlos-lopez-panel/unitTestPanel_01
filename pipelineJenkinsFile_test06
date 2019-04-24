@@ -3,13 +3,12 @@ pipeline {
 
     stages {
         stage ("Install application packages") {
-            agent { dockerfile true }
             steps {
 			// ejecución de comandos ms2
 			bat """
 			  D:
 			  cd D://GIT//TESTUNIT//JC_NETTestUnit//NETTestUnit_06
-			  dir
+			  docker build -t juancarloslopezpanel/nettestunit_06:firsttry .
 			"""
             }
         }
