@@ -4,7 +4,6 @@ pipeline {
     stages {
         stage ("Install application packages") {
             agent { dockerfile true }
-            }
             steps {
                 // cmd para ejecutar test
                 /*
