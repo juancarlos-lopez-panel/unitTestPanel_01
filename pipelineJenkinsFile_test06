@@ -3,6 +3,7 @@ pipeline {
 
     stages {
         stage ("Install application packages") {
+            agent { dockerfile true }
             steps {
 			// ejecución de comandos ms2
 			bat """
