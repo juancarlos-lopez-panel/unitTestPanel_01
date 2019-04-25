@@ -3,7 +3,12 @@ pipeline {
 
     stages {
         stage ("Install application packages") {
-            agent { dockerfile true }
+            agent {
+                docker {
+                    image 'trion/ng-cli-karma:7.1.4'
+                    args '-p 3000:3000 -p 5000:5000' 
+                }
+            }
             steps {
 			// ejecución de comandos ms2
 			bat """
