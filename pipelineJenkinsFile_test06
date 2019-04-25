@@ -1,20 +1,22 @@
 pipeline {
-    agent none
-
+    // agent none
+    agent any
+    
     stages {
         stage ("Install application packages") {
-            agent {
-                docker {
-                    image 'microsoft/dotnet-framework:4.7.2-sdk'
-		    args '-p 3000:3000 -p 5000:5000'
-                }
-            }
+            // agent {
+            //     docker {
+            //         image 'microsoft/dotnet-framework:4.7.2-sdk'
+	    // 	    args '-p 3000:3000 -p 5000:5000'
+            //     }
+            // }
             steps {
 			// ejecución de comandos ms2
 			bat """
 			  D:
-			//   cd D://GIT//TESTUNIT//JC_NETTestUnit//NETTestUnit_06
-			//   docker build -t juancarloslopezpanel/nettestunit_06:firsttry .
+			  cd D://GIT//TESTUNIT//JC_NETTestUnit//NETTestUnit_06
+			  //docker build -t juancarloslopezpanel/nettestunit_06:firsttry .
+			  dotnet publish ./AssertExamples/AssertExamples.csproj -o /publish/
 			"""
             }
         }
