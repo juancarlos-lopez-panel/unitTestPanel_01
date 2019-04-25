@@ -9,7 +9,7 @@ pipeline {
 			bat """
 			  D:
 			  cd D://GIT//TESTUNIT//JC_NETTestUnit//NETTestUnit_06
-			  docker build -t juancarloslopezpanel/nettestunit_06:firsttry .
+			//   docker build -t juancarloslopezpanel/nettestunit_06:firsttry .
 			"""
             }
         }
