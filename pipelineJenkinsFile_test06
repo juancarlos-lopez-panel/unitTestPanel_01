@@ -13,7 +13,7 @@ pipeline {
 			// ejecución de comandos ms2
 			bat """
 			  D:
-			  cd D://GIT//TESTUNIT//JC_NETTestUnit//NETTestUnit_06
+			//   cd D://GIT//TESTUNIT//JC_NETTestUnit//NETTestUnit_06
 			//   docker build -t juancarloslopezpanel/nettestunit_06:firsttry .
 			"""
             }
